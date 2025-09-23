@@ -96,4 +96,4 @@ pyinstaller --onefile --noconsole main.py -n PDF-to-MD-Converter
 
 📜 License
 
-MIT License © 2025 [你的名字或团队名]
+MIT License © 2025 [dergwu]
