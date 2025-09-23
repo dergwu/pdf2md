@@ -1,9 +1,14 @@
 name: Build and Release PDF-to-MD
 
 on:
+  # 方式1：推送 tag（v1.0.0 这种格式）时触发
   push:
     tags:
-      - "v*.*.*"   # 例如 v1.0.0 时才会触发构建
+      - "v*.*.*"
+
+  # 方式2：在 GitHub 页面点击 Publish release 时触发
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -33,7 +38,7 @@ jobs:
           pyinstaller -F -w main.py
         shell: powershell
 
-      # 5. 上传打包结果到 Release
+      # 5. 上传 exe 到 Release
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
