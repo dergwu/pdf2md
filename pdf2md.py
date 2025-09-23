@@ -10,7 +10,7 @@ import shutil
 
 UPLOAD_DIR = "uploads"
 
-# 创建上传目录
+# 创建上传目录1
 if not os.path.exists(UPLOAD_DIR):
     os.makedirs(UPLOAD_DIR)
 
@@ -174,3 +174,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = PDF2MDApp(root)
     root.mainloop()
+
